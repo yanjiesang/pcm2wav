@@ -1,3 +1,3 @@
 # pcm2wav
 
-**convert audio pcm data to wav file**
+**A tool convert audio pcm file to wav file**
