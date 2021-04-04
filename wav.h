@@ -43,9 +43,9 @@ typedef struct
 {
     unsigned int magic;             /* 'FMT '*/
     unsigned int fmt_size;          /* 16 or 18 */
-    unsigned int format;		    /* see WAV_FMT_* */
+    unsigned short format;		    /* see WAV_FMT_* */
     unsigned short channels;
-    unsigned short sample_rate;	    /* frequence of sample */
+    unsigned int sample_rate;	    /* frequence of sample */
     unsigned int bytes_p_second;
     unsigned short blocks_align;	/* samplesize; 1 or 2 bytes */
     unsigned short sample_length;	/* 8, 12 or 16 bit */

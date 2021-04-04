@@ -35,12 +35,12 @@ static int WavHeaderFill(const PWavContainer pWavContainer,unsigned short channe
 	pWavContainer->header.type = WAV_WAVE;
 
 	pWavContainer->format.magic = WAV_FMT;
-	pWavContainer->format.fmt_size = LE_INT(16);
+	pWavContainer->format.fmt_size = LE_INT(sizeof(WavFmt)-8);
 	pWavContainer->format.format = LE_SHORT(WAV_FMT_PCM);
     pWavContainer->format.channels = LE_SHORT(channels);
 	pWavContainer->format.sample_rate = LE_INT(sample_rate);
     pWavContainer->format.blocks_align = LE_SHORT(channels * sample_length / 8);
-    pWavContainer->format.bytes_p_second = LE_INT((unsigned short)(pWavContainer->format.blocks_align) * sample_rate);
+    pWavContainer->format.bytes_p_second = LE_INT(pWavContainer->format.blocks_align * sample_rate);
     pWavContainer->format.sample_length = LE_SHORT(sample_length);
 
 	pWavContainer->chunk.type = WAV_DATA;
