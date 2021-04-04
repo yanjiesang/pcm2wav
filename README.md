@@ -12,5 +12,5 @@
 	- excute command `cmake ..`
 3. Excute `compile.sh` in current dirctory  
 
-**Usage**
+**Usage**  
 `pcm2wav pcm_file wav_file channels sample_rate sample_length`
