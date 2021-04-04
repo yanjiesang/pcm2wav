@@ -1,16 +1,8 @@
 
-ARCH?=x86
 CC=gcc
 
 ROOT_DIR=.
-
-ifeq ($(ARCH),arm)
-CC=gcc
-BUILD_DIR=$(ROOT_DIR)/build_arm
-else
-CC=gcc
-BUILD_DIR=$(ROOT_DIR)/build_x86
-endif
+BUILD_DIR=$(ROOT_DIR)/build
 
 SOURCE_FILE_DIR=$(ROOT_DIR)
 INCLUDE_FILE_DIR=$(ROOT_DIR)
